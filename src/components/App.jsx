@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import ContactForm from './ContactForm/ContactForm';
@@ -20,7 +20,7 @@ export const App = () => {
     if (contactLocalStorage) {
       setContacts(contactLocalStorage);
     } else return;
-  }, []);
+  }, [contactLocalStorage]);
 
   // componentDidMount() {
   //   const contactLocalStorage = localStorage.getItem(CONTACTS_LOCAL_STORAGE);
